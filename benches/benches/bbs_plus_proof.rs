@@ -47,19 +47,19 @@ fn pok_sig_benchmark(c: &mut Criterion) {
         let messages = &messages_range[i];
 
         let mut k = BTreeSet::new();
-        k.insert(0);
-        if *count > 1 {
-            k.insert(1);
-        }
-        if *count > *count / 4 {
-            k.insert(*count / 4);
-        }
+        // k.insert(0);
+        // if *count > 1 {
+        //     k.insert(1);
+        // }
+        // if *count > *count / 4 {
+        //     k.insert(*count / 4);
+        // }
         if *count > *count / 2 {
             k.insert(*count / 2);
         }
-        if *count > *count - 1 {
-            k.insert(*count - 1);
-        }
+        // if *count > *count - 1 {
+        //     k.insert(*count - 1);
+        // }
 
         let mut revealed_indices = vec![];
         let mut revealed_messages = vec![];

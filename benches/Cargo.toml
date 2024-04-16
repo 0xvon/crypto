@@ -22,6 +22,9 @@ coconut-crypto = { default-features = false, path = "../coconut" }
 oblivious_transfer_protocols = { default-features = false, path = "../oblivious_transfer" }
 dock_crypto_utils = { default-features = false, path = "../utils" }
 zeroize.workspace = true
+ecdsa = "0.16.9"
+k256 = "0.10.2"
+rand_core = { version = "0.6", default-features = false }
 
 [dev-dependencies]
 criterion = "0.4.0"
@@ -40,6 +43,11 @@ harness = false
 [[bench]]
 name = "ps_signature"
 path = "benches/ps_signature.rs"
+harness = false
+
+[[bench]]
+name = "ecdsa_signature"
+path = "benches/ecdsa_signature.rs"
 harness = false
 
 [[bench]]
